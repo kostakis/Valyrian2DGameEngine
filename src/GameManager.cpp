@@ -75,7 +75,7 @@ void GameManager::main() {
 
 	// Switch active level here:
 	// m_currentMapConfig = dungeonMapConfig;
-	m_currentMapConfig = dungeonMapConfig;
+	m_currentMapConfig = marioMapConfig;
 
 	while(!m_exit) {
 		m_currTime = std::chrono::steady_clock::now();
