@@ -1,0 +1,22 @@
+{
+  "name": "super-mario",
+  "version": "1.0.0",
+  "dependencies": [
+    "allegro5",
+    "tmxlite",
+    "spdlog",
+    "zstd",
+    "pugixml"
+  ],
+  "builtin-baseline": "67b207f199b5d2ee09f206d2e9e9171e7c7a3274",
+  "overrides": [
+    {
+      "name": "openal-soft",
+      "version": "1.23.1"
+    },
+    {
+      "name": "fmt",
+      "version": "10.2.1"
+    }
+  ]
+}
