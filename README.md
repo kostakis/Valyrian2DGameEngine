@@ -15,7 +15,14 @@ This project is a demonstration of a modular game engine architecture, featuring
 * Mario - With some very basic interactions and animations
 * Simple fun dungeon map - just tile map
 
-You can change the variable `m_currentMapConfig` in `GameManager.cpp` to change the current map.  
+To switch between maps, open `src/GameManager.cpp` and change the assignment near the bottom of `GameManager::main()`:
+
+```cpp
+// Switch active level here:
+m_currentMapConfig = marioMapConfig;    // classic Mario level
+// m_currentMapConfig = dungeonMapConfig;  // top-down dungeon
+```
+
 Anyone is welcome to add a simple menu selection.
 
 ## 🎮 Features
@@ -129,8 +136,10 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 If you find this project interesting, please consider giving it a star! It helps more people discover the engine.
 
+---
 
-# Stuff that do not work
-* Only one tile layer is currently renderder, that is why you see black boxes in the dungeon map
-* Mario game does not end currently
-* No death mario animation
+## ⚠️ Known Limitations
+
+- Only one tile layer is currently rendered — this causes black boxes in the dungeon map.
+- The Mario level has no win/end condition yet.
+- There is no death animation for Mario.
