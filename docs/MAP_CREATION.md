@@ -2,22 +2,21 @@
 
 Levels are created using the [Tiled Map Editor](https://www.mapeditor.org/).
 
+TODO - This needs way better documentation. Showcase how to make the tiles collision per pixel.
+Showcase the properties of the enemies objects, etc.... many stuff
+
 ## Tile Setup
 1. Use a **16x16** tile size.
 2. Load the tilesets from the `media/` folder (e.g., `tileset_packed.png`).
 3. Ensure the map is exported in **CSV format** (not Base64 or Zlib), as the current parser expects comma-separated values.
 
 ## Layer Structure
-Every `.tmx` file must contain at least two layers with specific names:
+Every `.tmx` file must contain at least one layer with specific name:
 
 ### 1. `TileLayer`
 - Contains all "solid" geometry (ground, pipes, blocks).
 - Tiles in this layer are used for collision detection.
 - **Solid Logic**: Tiles are considered solid based on their ID, configured in `GameManager::initGame()`.
-
-### 2. `BackgroundLayer`
-- Used for non-colliding decorations (clouds, bushes, far-off mountains).
-- This layer renders behind the `TileLayer`.
 
 ### 3. `Enemies` (Object Layer)
 - Used to spawn entities. Place "Point" or "Rectangle" objects here.
