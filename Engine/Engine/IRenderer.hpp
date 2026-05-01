@@ -1,6 +1,0 @@
-#ifndef SUPERMARIO_RENDERER_HPP
-#define SUPERMARIO_RENDERER_HPP
-
-class IRenderer {};
-
-#endif // SUPERMARIO_RENDERER_HPP
