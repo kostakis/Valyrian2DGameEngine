@@ -143,3 +143,4 @@ If you find this project interesting, please consider giving it a star! It helps
 - Only one tile layer is currently rendered — this causes black boxes in the dungeon map.
 - The Mario level has no win/end condition yet.
 - There is no death animation for Mario.
+- Scalling is mess. Design idea was to enable scalling for the tile layer or not so game can be more zoomed. Now everything is messed up and only work at x2 scalling
