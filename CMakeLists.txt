@@ -13,6 +13,11 @@ add_executable(2DGameDemonstration ${all_src_files})
 target_include_directories(2DGameDemonstration PRIVATE src)
 target_link_libraries(2DGameDemonstration PRIVATE Engine)
 
+target_compile_options(2DGameDemonstration PRIVATE
+    $<$<CXX_COMPILER_ID:MSVC>:/W4>
+    $<$<NOT:$<CXX_COMPILER_ID:MSVC>>:-Wall -Wextra>
+)
+
 # Windows only 
 set_target_properties(2DGameDemonstration PROPERTIES
     VS_DEBUGGER_WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}"

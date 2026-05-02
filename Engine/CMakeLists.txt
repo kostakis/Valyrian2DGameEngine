@@ -40,7 +40,10 @@ target_include_directories(Engine
     PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/Engine
 )
 
-target_compile_features(Engine PUBLIC cxx_std_14)
+target_compile_options(Engine PRIVATE
+    $<$<CXX_COMPILER_ID:MSVC>:/W4>
+    $<$<NOT:$<CXX_COMPILER_ID:MSVC>>:-Wall -Wextra>
+)
 
 find_package(spdlog CONFIG REQUIRED)
 find_package(zstd CONFIG REQUIRED)
