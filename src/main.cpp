@@ -19,8 +19,8 @@ int main() {
 #endif
 
 	// Player position trace is verbose — always on for debugging.
-	getOrCreateLogger("Player")->set_level(spdlog::level::trace);
-	getOrCreateLogger("Game")->set_level(spdlog::level::trace);
+	// getOrCreateLogger("Player")->set_level(spdlog::level::trace);
+	// getOrCreateLogger("Game")->set_level(spdlog::level::trace);
 
 	// Eagerly create all enemy loggers so explicit level overrides apply
 	// before any enemy is spawned (loggers are otherwise created lazily).
